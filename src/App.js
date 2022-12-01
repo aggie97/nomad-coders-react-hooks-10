@@ -3,7 +3,8 @@ import "./App.css";
 import { useInput } from "./customHooks/useInput";
 
 const App = () => {
-  const name = useInput("Mr. ");
+  const maxLenth = (value) => !value.includes("@");
+  const name = useInput("Mr. ", maxLenth);
   return (
     <div className="App">
       <h1>Hello</h1>
